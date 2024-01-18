@@ -1,9 +1,9 @@
 {
     "private": true,
-    "productName": "Entry",
+    "productName": "Entry for JINI",
     "name": "entry",
-    "version": "2.1.10",
-    "description": "Entry for offline",
+    "version": "1.1.0",
+    "description": "Entry offline for JINI",
     "main": "src/main_build/main.bundle.js",
     "scripts": {
         "start": "cross-env NODE_ENV=development electron . --debug",
@@ -25,9 +25,11 @@
     },
     "keywords": [
         "entry",
-        "entry-offline"
+        "entry-offline",
+        "entry-offline for jini",
+        "jini"
     ],
-    "author": "entrylabs",
+    "author": "entrylabs & JINIROBOT",
     "license": "MIT",
     "dependencies": {
         "@babel/core": "^7.20.7",
