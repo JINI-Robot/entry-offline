@@ -11,11 +11,11 @@
 ; MUI Settings / Icons
 !define MUI_ICON "icon.ico"
 !define MUI_UNICON "icon.ico"
-!define PRODUCT_NAME "Entry"
-!define APP_NAME "Entry.exe"
-!define PRODUCT_VERSION "2.1.10"
-!define PRODUCT_PUBLISHER "EntryLabs"
-!define PRODUCT_WEB_SITE "http://www.playentry.org/"
+!define PRODUCT_NAME "Entry for JINI"
+!define APP_NAME "Entry for JINI.exe"
+!define PRODUCT_VERSION "1.1.0(based entry-offline v.2.1.10)"
+!define PRODUCT_PUBLISHER "JINIROBOT"
+!define PRODUCT_WEB_SITE "https://www.jinirobot.com/"
 
 ; MUI Settings / Header
 ;!define MUI_HEADERIMAGE
@@ -33,7 +33,7 @@
 Name "$(TEXT_ENTRY)"
 
 ; The file to write
-OutFile "${PRODUCT_NAME}_${PRODUCT_VERSION}_Setup.exe"
+OutFile "${PRODUCT_NAME}_${PRODUCT_VERSION}_Setup_x64.exe"
 
 ; The default installation directory
 InstallDir "C:\${PRODUCT_NAME}"
@@ -65,28 +65,28 @@ RequestExecutionLevel admin
 ; 다국어 설정
 !insertmacro MUI_LANGUAGE "Korean" ;first language is the default language
 
-LangString TEXT_ENTRY ${LANG_KOREAN} "엔트리"
-LangString TEXT_ENTRY_DELETE ${LANG_KOREAN} "엔트리 제거"
-LangString TEXT_ENTRY_TITLE ${LANG_KOREAN} "엔트리 (필수)"
+LangString TEXT_ENTRY ${LANG_KOREAN} "엔트리 for JINI"
+LangString TEXT_ENTRY_DELETE ${LANG_KOREAN} "엔트리 for JINI 제거"
+LangString TEXT_ENTRY_TITLE ${LANG_KOREAN} "엔트리 for JINI (필수)"
 LangString TEXT_START_MENU_TITLE ${LANG_KOREAN} "시작메뉴에 바로가기"
 LangString TEXT_DESKTOP_TITLE ${LANG_KOREAN} "바탕화면에 바로가기"
-LangString DESC_ENTRY ${LANG_KOREAN} "엔트리 기본 프로그램"
+LangString DESC_ENTRY ${LANG_KOREAN} "엔트리 for JINI 기본 프로그램"
 LangString DESC_START_MENU ${LANG_KOREAN} "시작메뉴에 바로가기 아이콘이 생성됩니다."
 LangString DESC_DESKTOP ${LANG_KOREAN} "바탕화면에 바로가기 아이콘이 생성됩니다."
-LangString SETUP_UNINSTALL_MSG ${LANG_KOREAN} "엔트리가 이미 설치되어 있습니다. $\n$\r'확인' 버튼을 누르면 이전 버전을 삭제 후 재설치하고 '취소' 버튼을 누르면 업그레이드를 취소합니다."
+LangString SETUP_UNINSTALL_MSG ${LANG_KOREAN} "엔트리 for JINI가 이미 설치되어 있습니다. $\n$\r'확인' 버튼을 누르면 이전 버전을 삭제 후 재설치하고 '취소' 버튼을 누르면 업그레이드를 취소합니다."
 
 
 !insertmacro MUI_LANGUAGE "English"
 
-LangString TEXT_ENTRY ${LANG_ENGLISH} "Entry"
-LangString TEXT_ENTRY_DELETE ${LANG_ENGLISH} "Entry Uninstall"
-LangString TEXT_ENTRY_TITLE ${LANG_ENGLISH} "Entry (required)"
+LangString TEXT_ENTRY ${LANG_ENGLISH} "Entry for JINI"
+LangString TEXT_ENTRY_DELETE ${LANG_ENGLISH} "Entry for JINI Uninstall"
+LangString TEXT_ENTRY_TITLE ${LANG_ENGLISH} "Entry for JINI (required)"
 LangString TEXT_START_MENU_TITLE ${LANG_ENGLISH} "Start menu shortcut"
 LangString TEXT_DESKTOP_TITLE ${LANG_ENGLISH} "Desktop shortcut"
-LangString DESC_ENTRY ${LANG_ENGLISH} "Entry Program"
+LangString DESC_ENTRY ${LANG_ENGLISH} "Entry for JINI Program"
 LangString DESC_START_MENU ${LANG_ENGLISH} "Create shortcut on start menu"
 LangString DESC_DESKTOP ${LANG_ENGLISH} "Create shortcut on desktop"
-LangString SETUP_UNINSTALL_MSG ${LANG_ENGLISH} "Entry is already installed. $\n$\nClick 'OK' to remove the previous version or 'Cancel' to cancel this upgrade."
+LangString SETUP_UNINSTALL_MSG ${LANG_ENGLISH} "Entry for JINI is already installed. $\n$\nClick 'OK' to remove the previous version or 'Cancel' to cancel this upgrade."
 
 
 
@@ -101,13 +101,13 @@ Section $(TEXT_ENTRY_TITLE) SectionEntry
 
   ; Put file there
   SetOutPath "$INSTDIR\locales"
-  File "..\dist\Entry-win32-x64\win-unpacked\locales\*.*"
+  File "..\dist\Entry for JINI-win32-x64\win-unpacked\locales\*.*"
 
   SetOutPath "$INSTDIR\resources"
-  File /r "..\dist\Entry-win32-x64\win-unpacked\resources\*.*"
+  File /r "..\dist\Entry for JINI-win32-x64\win-unpacked\resources\*.*"
 
   SetOutPath "$INSTDIR"
-  File "..\dist\Entry-win32-x64\win-unpacked\*.*"
+  File "..\dist\Entry for JINI-win32-x64\win-unpacked\*.*"
   File "icon.ico"
 
   WriteRegStr HKCR ".ent" "" "${PRODUCT_NAME}"
