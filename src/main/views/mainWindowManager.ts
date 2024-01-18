@@ -41,12 +41,12 @@ export default class {
         };
 
         if (language === 'ko') {
-            title = `엔트리 for JINI v${title}`;
+            title = `엔트리 for JINI v${title}(based entry-offline v2.1.10)`;
             crashedMsg.title = '오류 발생';
             crashedMsg.content =
                 '프로그램이 예기치 못하게 종료되었습니다. 작업 중인 파일을 저장합니다.';
         } else {
-            title = `Entry for JINI v${title}`;
+            title = `Entry for JINI v${title}(based entry-offline v2.1.10)`;
             crashedMsg.title = 'Error occurs';
             crashedMsg.content =
                 'This program has been shut down unexpectedly. Save the file you were working on.';

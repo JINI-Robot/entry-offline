@@ -13,7 +13,7 @@
 !define MUI_UNICON "icon.ico"
 !define PRODUCT_NAME "Entry for JINI"
 !define APP_NAME "Entry for JINI.exe"
-!define PRODUCT_VERSION "1.1.0(based entry-offline v.2.1.10)"
+!define PRODUCT_VERSION "1.1.0"
 !define PRODUCT_PUBLISHER "JINIROBOT"
 !define PRODUCT_WEB_SITE "https://www.jinirobot.com/"
 
@@ -36,7 +36,7 @@ Name "$(TEXT_ENTRY)"
 OutFile "${PRODUCT_NAME}_${PRODUCT_VERSION}_Setup_x86.exe"
 
 ; The default installation directory
-InstallDir "C:\${PRODUCT_NAME}"
+InstallDir "C:\Program Files (x86)\JINI\${PRODUCT_NAME}"
 
 ; Registry key to check for directory (so if you install again, it will
 ; overwrite the old one automatically)
